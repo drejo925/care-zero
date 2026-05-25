@@ -1,0 +1,133 @@
+:root {
+    --primary: #003b5c;       /* Deep Professional Blue */
+    --accent: #00a3e0;        /* Health Tech Blue */
+    --accent-light: #e6f6fc;  /* Soft Blue Tint */
+    --bg: #ffffff;
+    --light-grey: #f8f9fa;
+    --text: #1a1a1a;
+    --text-muted: #5a6b7c;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+    background: var(--bg); 
+    color: var(--text); 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Master Grid Constraint Box */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; width: 100%; }
+
+/* Navigation */
+.navbar {
+    padding: 20px 0;
+    border-bottom: 1px solid #eef2f5;
+    background: #fff;
+    position: sticky;
+    top: 0; z-index: 100;
+}
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: 800; letter-spacing: -0.5px; font-size: 1.4rem; color: var(--primary); }
+.logo span { font-weight: 400; color: var(--accent); }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 500; margin-left: 30px; font-size: 0.95rem; }
+.btn-cta { background: var(--primary); color: #fff !important; padding: 10px 22px; border-radius: 4px; font-weight: 600; }
+
+/* Structural Hero Box Framework Alignment */
+.hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: white;
+}
+.hero-image-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+.hero-image-container img { width: 100%; height: 100%; object-fit: cover; }
+.overlay { 
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+    background: linear-gradient(to right, rgba(0, 59, 92, 0.95) 55%, rgba(0, 59, 92, 0.3) 100%); 
+}
+
+/* Stripped manual percentages to let internal constraints align automatically */
+.hero-content { 
+    max-width: 800px;
+    padding: 0; 
+}
+.hero-content h1 { font-size: 3.5rem; line-height: 1.15; margin: 15px 0; font-weight: 800; letter-spacing: -0.5px; }
+.hero-content p { font-size: 1.25rem; color: #e2f1f8; line-height: 1.5; max-width: 700px; }
+.eyebrow { text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: var(--accent); font-weight: 700; display: block; }
+.serif-italic { font-family: 'Lora', serif; font-style: italic; font-weight: 400; color: #fff; }
+
+/* Momentum Bar Styles */
+.momentum-bar {
+    background: #f0f4f8;
+    padding: 35px 0;
+    border-bottom: 1px solid #d1d9e0;
+    text-align: center;
+}
+.momentum-stats {
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 6px;
+    font-size: 1.1rem;
+}
+.momentum-sub { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 6px; }
+.momentum-funding { font-size: 0.95rem; color: #1a1a1a; font-weight: 500; }
+.status-link { color: var(--accent); font-weight: 700; text-decoration: none; border-bottom: 1px dashed var(--accent); transition: color 0.2s; }
+.status-link:hover { color: var(--primary); border-bottom-style: solid; }
+
+/* Structural Content Alternates */
+.white-bg { background: #ffffff; }
+.grey-bg { background: #f8fafc; }
+.content-section { padding: 100px 0; }
+.section-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.label { color: var(--accent); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 12px; letter-spacing: 1px; font-weight: 700; }
+h3 { font-size: 2.4rem; color: var(--primary); margin-bottom: 20px; font-weight: 800; line-height: 1.2; }
+
+.priority-details { display: flex; flex-direction: column; gap: 20px; font-size: 1.05rem; color: var(--text-muted); padding-top: 40px; }
+
+/* MMRV Card Grid Layout Fixes */
+.center-heading { text-align: center; max-width: 700px; margin: 0 auto 50px auto; }
+.sub-heading { color: var(--text-muted); font-size: 1.1rem; margin-top: 8px; }
+.mmrv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.mmrv-card {
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.01);
+}
+.mmrv-letter { font-size: 2.2rem; font-weight: 800; color: var(--accent); margin-bottom: 8px; }
+.mmrv-card h4 { font-size: 1.15rem; color: var(--primary); margin-bottom: 10px; font-weight: 700; }
+.mmrv-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+
+/* Feature Items */
+.feature-item { margin-bottom: 30px; padding-left: 20px; border-left: 4px solid var(--accent); }
+.feature-item h4 { font-size: 1.15rem; color: var(--primary); margin-bottom: 4px; font-weight: 700; }
+.feature-item p { color: var(--text-muted); font-size: 0.95rem; }
+
+/* Forms & Footer */
+.form-section { background: var(--light-grey); padding: 90px 0; border-top: 1px solid #e2e8f0; }
+.form-card { background: #fff; padding: 50px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.02); max-width: 700px; margin: 0 auto; text-align: center; }
+.form-card h2 { font-size: 2rem; color: var(--primary); margin-bottom: 12px; font-weight: 800; }
+.form-card p { color: var(--text-muted); margin-bottom: 35px; }
+.form-row { display: flex; gap: 15px; }
+input { width: 100%; padding: 12px 16px; border: 1px solid #cbd5e1; border-radius: 4px; font-family: inherit; font-size: 0.95rem; margin-bottom: 15px; outline: none; }
+input:focus { border-color: var(--accent); }
+button { background: var(--accent); color: white; border: none; padding: 14px 30px; border-radius: 4px; font-weight: 700; cursor: pointer; width: 100%; font-size: 1rem; }
+footer { background: var(--primary); color: #fff; padding: 35px 0; font-size: 0.9rem; text-align: center; }
+
+/* Responsive break points */
+@media(max-width: 992px) {
+    .section-grid { grid-template-columns: 1fr; gap: 30px; }
+    .mmrv-grid { grid-template-columns: 1fr 1fr; }
+    .hero-content h1 { font-size: 2.6rem; }
+    .priority-details { padding-top: 0; }
+}
+@media(max-width: 576px) {
+    .mmrv-grid { grid-template-columns: 1fr; }
+    .form-row { flex-direction: column; gap: 0; }
+    .nav-links { display: none; }
+}
